@@ -1,13 +1,9 @@
--- Create user_0d_1
-CREATE USER 'user_0d_1'@'localhost';
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
-
--- Create user_0d_2
-CREATE USER 'user_0d_2'@'localhost';
-GRANT ALL PRIVILEGES ON *.* TO 'user_0d_2'@'localhost';
-
--- Show privileges for user_0d_1
+-- Check if user_0d_1 exists
+SELECT user FROM mysql.user WHERE user = 'user_0d_1' AND host = 'localhost';
+-- If user_0d_1 exists, show its privileges
 SHOW GRANTS FOR 'user_0d_1'@'localhost';
 
--- Show privileges for user_0d_2
+-- Check if user_0d_2 exists
+SELECT user FROM mysql.user WHERE user = 'user_0d_2' AND host = 'localhost';
+-- If user_0d_2 exists, show its privileges
 SHOW GRANTS FOR 'user_0d_2'@'localhost';
